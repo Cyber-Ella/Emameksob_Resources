@@ -169,6 +169,7 @@ span{
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s ease;
+  animation: pulseGlow 2s infinite;
 }
 
 .hero-btn:hover {
@@ -178,16 +179,27 @@ span{
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+  }
+
+  .hero-overlay {
+    padding: 0 1rem;
+  }
+
   .hero-text h1 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+    line-height: 1.3;
   }
 
   .hero-text p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero-btn {
-    padding: 0.8rem 1.5rem;
+    padding: 0.7rem 1.4rem;
+    font-size: 0.9rem;
   }
 }
 /* ===== ABOUT SECTION ===== */
@@ -360,7 +372,7 @@ span{
 
 @media (max-width: 600px) {
   .service-card {
-    min-width: 100%;
+    min-width: 90%;
   }
 }
 /* Contact Section */
@@ -391,6 +403,7 @@ span{
   backdrop-filter: blur(10px);
   padding: 40px;
   gap: 30px;
+  overflow: hidden;
 }
 
 /* Left Side - Info */
@@ -402,6 +415,7 @@ span{
 .contact-info h3 {
   margin-bottom: 15px;
   color: #ffcc00;
+  font-size:1.5rem;
 }
 
 .contact-info p {
@@ -409,6 +423,21 @@ span{
   color: #ccc;
   margin-bottom: 20px;
 }
+.contact-info,
+.contact-info p,
+.contact-info li {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+.contact-info,
+.contact-form {
+  flex-shrink: 1;
+  flex: 1 1 300px;
+}
+
 
 .contact-info ul {
   list-style: none;
@@ -419,6 +448,9 @@ span{
 .contact-info li {
   margin-bottom: 10px;
   color: #ddd;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .contact-info a {
@@ -481,6 +513,8 @@ span{
   color: #fff;
   font-size: 1rem;
   outline: none;
+  width: 100%;
+  max-width: 90%;
 }
 
 .contact-form input::placeholder,
@@ -497,6 +531,8 @@ span{
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+  width: 100%;
+  max-width: 90%;
 }
 
 .contact-form button:hover {
@@ -504,9 +540,18 @@ span{
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 768px) 
+  #contact {
+    padding: 60px 20px;
+}
   .contact-box {
     flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .contact-info, .contact-form {
+    width: 100%;
   }
 }
 /* ===== GALLERY SECTION ===== */
@@ -533,6 +578,17 @@ span{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+}
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .gallery-item img {
+    height: 120px;
+    object-fit: cover;
+  }
 }
 
 .gallery-item {
@@ -606,7 +662,7 @@ span{
 }
 
 .lightbox .close:hover {
-  color: #00bcd4;
+  color: #e6b800;
 }
 
 @keyframes fadeIn {
@@ -617,7 +673,7 @@ span{
 .order-section {
   position: relative;
   width: 100%;
-  background: url("images/order-bg.jpg") center/cover no-repeat;
+  background: url("service8.jpeg") center/cover no-repeat;
   min-height: 60vh;
   display: flex;
   align-items: center;
@@ -659,7 +715,7 @@ span{
 }
 
 .order-btn {
-  background: #00bcd4;
+  background: #ffcc00;
   color: #fff;
   padding: 0.9rem 2rem;
   border-radius: 30px;
@@ -670,7 +726,7 @@ span{
 }
 
 .order-btn:hover {
-  background: #0097a7;
+  background: #e6b800;
   transform: scale(1.05);
 }
 
@@ -700,9 +756,42 @@ span{
     box-shadow: 0 0 0 0 rgba(0, 188, 212, 0);
   }
 }
+@media (max-width: 768px) {
+  .order-section {
+    background-position: center;
+    min-height: 70vh;
+    padding: 40px 15px;
+  }
+
+  .order-overlay {
+    padding: 20px;
+  }
+
+  .order-content {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .order-content h2 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .order-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .order-btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
+  }
+}
+
 
 .order-btn {
-  background: #00bcd4;
+  background: #ffcc00;
   color: #fff;
   padding: 0.9rem 2rem;
   border-radius: 30px;
@@ -714,7 +803,7 @@ span{
 }
 
 .order-btn:hover {
-  background: #0097a7;
+  background: #e6b800;
   transform: scale(1.07);
   animation: none; /* pause pulsing while hovering */
 }
