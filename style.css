@@ -763,11 +763,13 @@ span{
   text-decoration: none;
   transition: 0.3s ease;
   display: inline-block;
+  animation: pulseGlow 2s infinite;
 }
 
 .order-btn:hover {
   background: #e6b800;
-  transform: scale(1.05);
+  transform: scale(1.07);
+  animation: none;
 }
 
 /* Responsive design */
@@ -829,23 +831,6 @@ span{
   }
 }
 
-.order-btn {
-  background: #00bcd4;
-  color: #fff;
-  padding: 0.9rem 2rem;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s ease;
-  display: inline-block;
-  animation: pulseGlow 2s infinite;
-}
-
-.order-btn:hover {
-  background: #0097a7;
-  transform: scale(1.07);
-  animation: none; /* pause pulsing while hovering */
-}
 .footer {
   background-color: #111;
   color: #eee;
