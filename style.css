@@ -713,7 +713,7 @@ span{
 .order-section {
   position: relative;
   width: 100%;
-  background: url("images/service9.jpeg") center/cover no-repeat;
+  background: url("service9.jpeg") center/cover no-repeat;
   min-height: 60vh;
   display: flex;
   align-items: center;
